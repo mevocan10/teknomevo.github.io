@@ -7,14 +7,7 @@ const productDetails = [
   des:"",
   
   url: "https://www.teknomevo.com/" },
-{
-  name: "n11",
-  imageUrl:
-  "https://images.seeklogo.com/logo-png/49/1/n11-com-logo-png_seeklogo-490409.png",
-  heading: "Hemen Sipariş Ver",
-  des:
-  "",
-url: "https://www.n11.com/magaza/teknomevo" },
+
 
 {
   name: "Hepsiburada",
@@ -23,7 +16,14 @@ url: "https://www.n11.com/magaza/teknomevo" },
   des:
   "" ,
   url: "https://www.hepsiburada.com/magaza/teknomevo?tab=allproducts" },
-
+{
+  name: "n11",
+  imageUrl:
+  "https://images.seeklogo.com/logo-png/49/1/n11-com-logo-png_seeklogo-490409.png",
+  heading: "Hemen Sipariş Ver",
+  des:
+  "",
+url: "https://www.n11.com/magaza/teknomevo" },
 {
   name: "Trendyol",
   imageUrl: "https://images.seeklogo.com/logo-png/34/1/trendyol-logo-png_seeklogo-346740.png",
@@ -82,7 +82,6 @@ function Product(product = {}) {
 <div class='card' data-name='${name}'>
   <div class='img-container'>
     <img class='product-img' src='${imageUrl}' alt='' />
-    <div class='out-of-stock-cover'><span>Out Of Stock</span></div>
   </div>
   <div class='details'>
     <div class='name-fav'>
@@ -102,19 +101,7 @@ function Product(product = {}) {
 
 
 
-function CartItems(cartItem = {}) {
-  let { name, price, imgSrc, qty } = cartItem;
-  return `
-<div class='cart-item'>
-  <div class='cart-img'>
-    <img src='${imgSrc}' alt='' />
-  </div>
-  <strong class='name'>${name}</strong>
-  <span class='qty-change'>${QtyBtn(qty)}</span>
-  <p class='price'>₹ ${price * qty}</p>
-  <button onclick='removeItem(this)'><i class='fas fa-trash'></i></button>
-</div>`;
-}
+
 
 function Banner() {
   return `
@@ -131,7 +118,6 @@ function Banner() {
 
   <div class='nav'>
   </div>
-  <div onclick='sideNav(0)' class='cover'></div>
 
 </div>`;
 }
