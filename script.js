@@ -143,7 +143,7 @@ window.onload = () => {
   const teknomevoCard = document.querySelector('.card[data-name="teknomevo"]');
   if (teknomevoCard) {
     teknomevoCard.style.width = '95%';    // Yüzde olarak genişlik
-    teknomevoCard.style.height = '30vh';  // Görüntü yüksekliğinin %40'ı
+    teknomevoCard.style.height = '40vh';  // Görüntü yüksekliğinin %40'ı
     teknomevoCard.style.color = 'white ';
     teknomevoCard.style.backgroundColor = 'white';
     
